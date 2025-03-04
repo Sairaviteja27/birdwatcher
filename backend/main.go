@@ -177,7 +177,7 @@ func main() {
 
 	// Start the server.
 	logf("Starting server listen_addr=%q", bindAddr)
-	if err := r.Run(bindAddr); err != nil && err != http.ErrServerClosed {
+	if err := r.Run("[::]:7000"); err != nil && err != http.ErrServerClosed {
 		logf("Error: %s", err)
 	}
 }
